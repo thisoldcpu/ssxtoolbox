@@ -15,12 +15,14 @@ I got tired of jumping through hoops just to see what I extracted. The turning p
 
 That meant the extraction, decoding, and rendering could all live in one native app. No Blender round-trip. No middleware. Parse the binary, hand it to FMX, and look at the result on screen. One toolbox instead of a pipeline.
 
-<img width="1922" height="1112" alt="Screenshot 2026-08-20 040949" src="https://github.com/user-attachments/assets/5abd2ef4-fa49-4694-8f5b-572deb034ba0" />
+<img width="2560" height="1392" alt="Screenshot 2026-08-24 074942" src="https://github.com/user-attachments/assets/df2b2ce0-1b0f-449d-993e-b83e896a791f" />
 
 ## What It Handles
 *   **BIG Archives:** Unpack EA's container files.
 *   **SSH Textures:** Decode straight into viewable, exportable images.
 *   **PBD / WDF Geometry:** Parse and render patch-based mesh data natively via FMX.
+
+<img width="2560" height="1392" alt="Screenshot 2026-08-24 021816" src="https://github.com/user-attachments/assets/55a0ff14-1876-4e8e-8ddb-a450126a09fa" />
 
 ## Format Support
 Parsed unit-by-unit against real disc data - not assumed from documentation. Currently:
@@ -37,6 +39,8 @@ Parsed unit-by-unit against real disc data - not assumed from documentation. Cur
 | **LOC** | PS2 titles | Chunked localization strings (LOCH/LOCL) |
 
 That's 8 formats decoded end-to-end, spanning four titles. Another dozen extensions - BNK, MPC, SSS, LTG, SSF, ADL, AIP, SOP, WDX, WDR, WFX, WDS - are already identified by signature for the file browser, waiting on parsers of their own. 
+
+<img width="2560" height="1392" alt="Screenshot 2026-08-24 021654" src="https://github.com/user-attachments/assets/bbc604c5-8136-4449-b69e-6e38529f95f0" />
 
 *Note: Compression is handled separately from containers: ChunkZip segment metadata (SSX 2012) is parsed, but the Deflate payload itself isn't decompressed yet.*
 
